@@ -64,7 +64,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link. Click here!](https://fombi-favour.github.io/Microverse-portfolio/)
+- [Live Demo Link. Click here!](https://fombi-favour.github.io/Awesome-books/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -117,9 +117,9 @@ You can deploy this project on github following instructions here:
 
 👤 **Ernest Lasten**
 
-- GitHub: [maths29](https://github.com/maths29)
-- Twitter: [@maths29](https://twitter.com/maths29)
-- LinkedIn: [Iwu John](https://www.linkedin.com/in/iwu-john-b92b01148/)
+- GitHub: [Lasten-Ernest](https://github.com/Lasten-Ernest)
+- Twitter: [@ErnestLasten](https://twitter.com/ErnestLasten)
+- LinkedIn: [Ernest Lasten](https://www.linkedin.com/in/ernest-lasten-613990197/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
