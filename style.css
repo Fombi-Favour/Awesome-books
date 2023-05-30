@@ -1,9 +1,44 @@
-li {
-  list-style: none;
+body {
+    position: relative;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+   
+} 
+
+.book-list li {
+    list-style: none;
+    line-height: 2.4;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
 }
 
-.nav-container ul li {
-  padding: 4px;
+.form-div {
+    display: block;
+    text-align: center;
+}
+
+.inputField {
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    border: 2px solid;
+}
+
+.remove-btn, .btn {
+    padding: 2px;
+    box-shadow: 3px 3px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.add-book {
+    margin-top: 30px;
+    text-align: center;
+}
+  
+.book-list {
   border: 1.5px solid #000;
   cursor: pointer;
 }
