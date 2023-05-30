@@ -1,3 +1,84 @@
-li {
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'KG Miss Kindy Chunky', sans-serif;
+}
+
+.app-title,
+.add-book {
+  text-align: center;
+}
+
+.app-title h1,
+#add-book h2 {
+  font-size: 42px;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #000;
+  margin: 12px;
+}
+
+.book-list li {
   list-style: none;
+  line-height: 2.4;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.book-list li:nth-child(odd) {
+  background-color: rgba(137, 137, 138, 0.5);
+}
+
+.item-list {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.remove-btn,
+.btn {
+  width: 94px;
+  height: 34px;
+  padding: 2px;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 3px 3px;
+  border: 3px solid #000;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#add-book {
+  padding-top: 60px;
+}
+
+.form-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: -50px;
+}
+
+.inputField {
+  width: 365px;
+  height: 42px;
+  font-size: 17px;
+  font-weight: 200;
+  padding: 0 10px;
+  border: 3px solid;
+  outline: none;
+}
+
+.inputField::placeholder {
+  font-weight: 600;
+}
+
+.submit-btn {
+  width: 60px;
+  margin-left: 330px;
 }
