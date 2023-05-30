@@ -4,21 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <title>Awesome Books</title>
   </head>
   <body>
-    <h1>Awesome Books</h1>
-    <!-- books list -->
-    <div class="book-list"></div>
-    <div class="add-book">
-      <form id="forms">
-        <input type="text" id="name" class="input-col" placeholder="Title" required />
-        <br /><br />
-        <input type="text" id="author" class="input-col" placeholder="author" required />
-        <br /><br />
-        <button type="button" class="btn-add">Add</button>
-      </form>
-    </div>
-    <script src="/scripts/books.js"></script>
+    <section class="book-display" id="book-display">
+      <div class="app-title">
+        <h1 class="heading">All Awesome Books</h1>
+      </div>
+      <div class="book-list"></div>
+    </section>
+
+    <section class="add-book" id="add-book">
+      <div class="add-book">
+        <h2>Add New Book</h2>
+        <span></span>
+        <form id="form" class="form-div">
+          <p class="warning"></p>
+          <input class="inputField title" type="text" name="title" id="title" placeholder="Title" />
+          <input class="inputField author" type="text" name="author" id="author" placeholder="Author" />
+          <button id="submit" class="btn submit-btn" type="submit">Add Book</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
