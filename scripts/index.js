@@ -44,15 +44,15 @@ function showBooks(title, author, id) {
   const bookList = document.querySelector('.book-list');
   const items = document.createElement('li');
   items.innerHTML = `
-        <div class="item-list"><strong>${title}</strong> by <strong>${author}</strong></div>
+        <div class="item-list"><strong>"${title}"</strong> by <strong>${author}</strong></div>
         `;
   const removeBtn = document.createElement('button');
   removeBtn.textContent = 'Remove';
   removeBtn.className = 'remove-btn';
   items.append(removeBtn);
 
-  const hr = document.createElement('hr');
-  items.append(hr);
+  // const hr = document.createElement('hr');
+  // items.append(hr);
 
   bookList.appendChild(items);
 
