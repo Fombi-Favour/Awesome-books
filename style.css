@@ -1,3 +1,14 @@
 li {
   list-style: none;
 }
+
+.nav-container ul li {
+  padding: 4px;
+  border: 1.5px solid #000;
+  cursor: pointer;
+}
+
+.book-list li:nth-child(odd) {
+  background-color: rgb(137, 137, 138);
+  color: #fff;
+}
