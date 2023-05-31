@@ -88,3 +88,35 @@ if (books !== null) {
     showBooks(book.title, book.author, book.id);
   });
 }
+
+const showList = document.querySelector('#show-list');
+const showBook = document.querySelector('#show-book');
+const showContact = document.querySelector('#show-contact');
+const displayBook = document.querySelector('#book-display');
+const displayAddBook = document.querySelector('#add-book');
+const displayContact = document.querySelector('#contact');
+const navList = [displayBook, displayAddBook, displayContact];
+
+// console.log(navList);
+
+function displayNavMenu(id) {
+  navList.forEach((section) => {
+    if (section.id === id) {
+      section.classList.add = 'active';
+    } else {
+      section.style.display = 'none';
+    }
+  });
+}
+
+showList.addEventListener('click', () => {
+  displayNavMenu(displayBook.id);
+});
+
+showBook.addEventListener('click', () => {
+  displayNavMenu(displayAddBook.id);
+});
+
+showContact.addEventListener('click', () => {
+  displayNavMenu(displayContact.id);
+});
