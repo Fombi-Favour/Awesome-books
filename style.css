@@ -5,29 +5,96 @@ body {
   font-family: 'KG Miss Kindy Chunky', sans-serif;
 }
 
+/* ======= Beginning of the navigation and date style */
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.container {
+  margin: 0 5vw;
+}
+
+.nav-container {
+  width: 100vw;
+  margin-left: -5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #000;
+}
+
+.logo a {
+  font-weight: bold;
+  color: #3b3939;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.nav-container ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav-container ul li {
+  padding: 5px;
+  border-right: 2px solid #000;
+  cursor: pointer;
+}
+
+#contact {
+  display: none;
+}
+
+.nav-links li a:hover {
+  color: blue;
+}
+
+.timeDisplay {
+  float: right;
+}
+
+#add-book {
+  display: none;
+}
+
+/* end of the navigation and date style */
 .app-title,
-.add-book {
+.add-book,
+.contact-title {
   text-align: center;
 }
 
 .app-title h1,
+.contact-title h2,
 #add-book h2 {
   font-size: 42px;
+}
+
+#book-display {
+  margin: 16px 36px;
+}
+
+#book-display.active,
+#add-book.active,
+#contact.active {
+  display: flex;
+  flex-direction: column;
 }
 
 .book-list {
   display: flex;
   flex-direction: column;
   border: 3px solid #000;
-  margin: 12px;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .book-list li {
   list-style: none;
   line-height: 2.4;
   display: flex;
   justify-content: space-between;
-  padding: 12px;
+  padding: 8px 20px;
 }
 
 .book-list li:nth-child(odd) {
@@ -52,16 +119,16 @@ body {
   cursor: pointer;
 }
 
-#add-book {
-  padding-top: 60px;
-}
-
 .form-div {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
   margin-top: -50px;
+}
+
+.warning {
+  color: #f31111;
 }
 
 .inputField {
@@ -81,4 +148,46 @@ body {
 .submit-btn {
   width: 60px;
   margin-left: 330px;
+}
+
+.contact-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-text,
+.contact-list {
+  font-size: 18px;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.contact-list li a {
+  text-decoration: none;
+  color: #000;
+}
+
+footer {
+  border: 3px solid;
+  margin: 16px 36px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer-info {
+  display: flex;
+  gap: 26px;
+  padding: 8px 20px;
+}
+
+.footer-info p {
+  font-size: 18px;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.text-2 a:hover {
+  color: blue;
+  text-decoration: underline;
 }
