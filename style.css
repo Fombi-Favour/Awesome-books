@@ -5,21 +5,57 @@ body {
   font-family: 'KG Miss Kindy Chunky', sans-serif;
 }
 
+header {
+  margin: 16px 36px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 3px solid;
+  padding: 8px 20px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 13px;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 19px;
+}
+
+.time {
+  display: flex;
+  justify-content: end;
+  padding-top: 12px;
+  font-size: 18px;
+}
+
 .app-title,
-.add-book {
+.add-book,
+.contact-title {
   text-align: center;
 }
 
 .app-title h1,
+.contact-title h2,
 #add-book h2 {
   font-size: 42px;
+}
+
+.book-display {
+  margin: 16px 36px;
 }
 
 .book-list {
   display: flex;
   flex-direction: column;
   border: 3px solid #000;
-  margin: 12px;
 }
 
 .book-list li {
@@ -27,7 +63,7 @@ body {
   line-height: 2.4;
   display: flex;
   justify-content: space-between;
-  padding: 12px;
+  padding: 8px 20px;
 }
 
 .book-list li:nth-child(odd) {
@@ -64,6 +100,10 @@ body {
   margin-top: -50px;
 }
 
+.warning {
+  color: #f31111;
+}
+
 .inputField {
   width: 365px;
   height: 42px;
@@ -81,4 +121,41 @@ body {
 .submit-btn {
   width: 60px;
   margin-left: 330px;
+}
+
+.contact-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-text,
+.contact-list {
+  font-size: 18px;
+}
+
+.contact-list li a {
+  text-decoration: none;
+  color: #000;
+}
+
+footer {
+  border: 3px solid;
+  margin: 16px 36px;
+}
+
+.footer-info {
+  display: flex;
+  gap: 26px;
+  padding: 8px 20px;
+}
+
+.footer-info p {
+  font-size: 18px;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.text-2 a {
+  text-decoration: none;
+  color: #000;
 }
