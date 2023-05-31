@@ -1,3 +1,90 @@
+// Handle page navigation
+
+function handlePageChange(e) {
+  const navLinks = document.getElementsByClassName('nav-link');
+  for (let i = 0; i < navLinks.length; i += 1) {
+    navLinks[i].style.color = '';
+  }
+
+  if (e.target.classList.contains('list')) {
+    document.querySelector('#book-display').style.display = 'block';
+    document.querySelector('#add-book').style.display = 'none';
+    document.querySelector('#contact').style.display = 'none';
+  } else if (e.target.classList.contains('addBook')) {
+    document.querySelector('#book-display').style.display = 'none';
+    document.querySelector('#add-book').style.display = 'block';
+    document.querySelector('#contact').style.display = 'none';
+  } else if (e.target.classList.contains('contactInfo')) {
+    document.querySelector('#book-display').style.display = 'none';
+    document.querySelector('#add-book').style.display = 'none';
+    document.querySelector('#contact').style.display = 'block';
+  }
+}
+
+document.addEventListener('click', (e) => {
+  handlePageChange(e);
+});
+
+// Date
+const timeElement = document.querySelector('.time');
+const dateElement = document.querySelector('.date');
+
+/**
+ * @param {Date} date
+ */
+function formatTime(date) {
+  const hours12 = date.getHours() % 12 || 12;
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
+  const isAm = date.getHours() < 12;
+
+  return `${hours12.toString().padStart(2, '0')}:${minutes
+    .toString()
+    .padStart(2, '0')}:${seconds
+    .toString()
+    .padStart(2, '0')} ${isAm ? 'AM' : 'PM'}`;
+}
+
+/**
+ * @param {Date} date
+ */
+function formatDate(date) {
+  const DAYS = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+  ];
+  const MONTHS = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
+
+  return `${DAYS[date.getDay()]}, ${
+    MONTHS[date.getMonth()]
+  } ${date.getDate()} ${date.getFullYear()}`;
+}
+
+setInterval(() => {
+  const now = new Date();
+
+  timeElement.textContent = formatTime(now);
+  dateElement.textContent = formatDate(now);
+}, 200);
+
 let books = JSON.parse(localStorage.getItem('books'));
 
 class Book {
@@ -88,35 +175,3 @@ if (books !== null) {
     showBooks(book.title, book.author, book.id);
   });
 }
-
-const showList = document.querySelector('#show-list');
-const showBook = document.querySelector('#show-book');
-const showContact = document.querySelector('#show-contact');
-const displayBook = document.querySelector('#book-display');
-const displayAddBook = document.querySelector('#add-book');
-const displayContact = document.querySelector('#contact');
-const navList = [displayBook, displayAddBook, displayContact];
-
-// console.log(navList);
-
-function displayNavMenu(id) {
-  navList.forEach((section) => {
-    if (section.id === id) {
-      section.classList.add = 'active';
-    } else {
-      section.style.display = 'none';
-    }
-  });
-}
-
-showList.addEventListener('click', () => {
-  displayNavMenu(displayBook.id);
-});
-
-showBook.addEventListener('click', () => {
-  displayNavMenu(displayAddBook.id);
-});
-
-showContact.addEventListener('click', () => {
-  displayNavMenu(displayContact.id);
-});

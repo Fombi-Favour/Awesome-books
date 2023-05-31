@@ -5,36 +5,62 @@ body {
   font-family: 'KG Miss Kindy Chunky', sans-serif;
 }
 
-header {
-  margin: 16px 36px;
-}
 
-header nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: 3px solid;
-  padding: 8px 20px;
-}
-
-.nav-menu {
-  list-style: none;
-  display: flex;
-  gap: 13px;
-}
-
-.nav-menu li a {
+ /* ======= Beginning of the navigation and date style */
+a {
   text-decoration: none;
   color: #000;
-  font-size: 19px;
 }
 
-.time {
-  display: flex;
-  justify-content: end;
-  padding-top: 12px;
-  font-size: 18px;
+.container {
+  margin: 0 5vw;
 }
+
+.nav-container {
+  width: 100vw;
+  margin-left: -5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #000;
+}
+
+.logo a {
+  font-weight: bold;
+  color: #3b3939;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.nav-container ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav-container ul li {
+  padding: 5px;
+  border-right: 2px solid #000;
+  cursor: pointer;
+}
+
+#contact {
+  display: none;
+}
+
+.timeDisplay {
+  float: right;
+}
+
+#add-book {
+  display: none;
+}
+
+
+
+
+  /* ======= end of the navigation and date style */
+
+
 
 .app-title,
 .add-book,
@@ -165,8 +191,7 @@ footer {
   font-size: 18px;
 }
 
-/* stylelint-disable-next-line no-descending-specificity */
-.text-2 a {
-  text-decoration: none;
+.text-2:hover {
   color: #000;
-}
+  text-decoration: underline;
+} 
