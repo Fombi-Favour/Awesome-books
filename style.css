@@ -5,8 +5,7 @@ body {
   font-family: 'KG Miss Kindy Chunky', sans-serif;
 }
 
-
- /* ======= Beginning of the navigation and date style */
+/* ======= Beginning of the navigation and date style */
 a {
   text-decoration: none;
   color: #000;
@@ -47,11 +46,10 @@ a {
   display: none;
 }
 
-.nav-link  li a:active { 
-  color:green;
-   background-color: yellow; 
+.nav-link li a:active {
+  color: green;
+  background-color: yellow;
 }
-
 
 .timeDisplay {
   float: right;
@@ -60,7 +58,8 @@ a {
 #add-book {
   display: none;
 }
-  /* ======= end of the navigation and date style */
+
+/* ======= end of the navigation and date style */
 .app-title,
 .add-book,
 .contact-title {
@@ -90,6 +89,7 @@ a {
   border: 3px solid #000;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .book-list li {
   list-style: none;
   line-height: 2.4;
@@ -118,10 +118,6 @@ a {
   border: 3px solid #000;
   background-color: #fff;
   cursor: pointer;
-}
-
-#add-book {
-  padding-top: 60px;
 }
 
 .form-div {
@@ -166,6 +162,7 @@ a {
   font-size: 18px;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .contact-list li a {
   text-decoration: none;
   color: #000;
@@ -190,8 +187,8 @@ footer {
   font-size: 18px;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .text-2 a:hover {
   color: blue;
   text-decoration: underline;
-
-} 
+}
