@@ -48,8 +48,15 @@ header nav {
   font-size: 42px;
 }
 
-.book-display {
+#book-display {
   margin: 16px 36px;
+}
+
+#book-display.active,
+#add-book.active,
+#contact.active {
+  display: flex;
+  flex-direction: column;
 }
 
 .book-list {
@@ -142,6 +149,10 @@ header nav {
 footer {
   border: 3px solid;
   margin: 16px 36px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .footer-info {
