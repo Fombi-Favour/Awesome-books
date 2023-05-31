@@ -47,9 +47,8 @@ a {
   display: none;
 }
 
-.nav-link  li a:active { 
-  color:green;
-   background-color: yellow; 
+.nav-links  li a:hover { 
+  color:blue;
 }
 
 
