@@ -47,6 +47,12 @@ a {
   display: none;
 }
 
+.nav-link  li a:active { 
+  color:green;
+   background-color: yellow; 
+}
+
+
 .timeDisplay {
   float: right;
 }
@@ -54,14 +60,7 @@ a {
 #add-book {
   display: none;
 }
-
-
-
-
   /* ======= end of the navigation and date style */
-
-
-
 .app-title,
 .add-book,
 .contact-title {
@@ -191,7 +190,8 @@ footer {
   font-size: 18px;
 }
 
-.text-2:hover {
-  color: #000;
+.text-2 a:hover {
+  color: blue;
   text-decoration: underline;
+
 } 

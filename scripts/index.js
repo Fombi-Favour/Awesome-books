@@ -138,9 +138,6 @@ function showBooks(title, author, id) {
   removeBtn.className = 'remove-btn';
   items.append(removeBtn);
 
-  // const hr = document.createElement('hr');
-  // items.append(hr);
-
   bookList.appendChild(items);
 
   removeBtn.addEventListener('click', () => {
