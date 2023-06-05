@@ -1,89 +1,11 @@
-// Handle page navigation
-
-function handlePageChange(e) {
-  const navLinks = document.getElementsByClassName('nav-link');
-  for (let i = 0; i < navLinks.length; i += 1) {
-    navLinks[i].style.color = '';
-  }
-
-  if (e.target.classList.contains('list')) {
-    document.querySelector('#book-display').style.display = 'block';
-    document.querySelector('#add-book').style.display = 'none';
-    document.querySelector('#contact').style.display = 'none';
-  } else if (e.target.classList.contains('addBook')) {
-    document.querySelector('#book-display').style.display = 'none';
-    document.querySelector('#add-book').style.display = 'block';
-    document.querySelector('#contact').style.display = 'none';
-  } else if (e.target.classList.contains('contactInfo')) {
-    document.querySelector('#book-display').style.display = 'none';
-    document.querySelector('#add-book').style.display = 'none';
-    document.querySelector('#contact').style.display = 'block';
-  }
-}
+import UpdateDate from './modules/luxon.js';
+import handlePageChange from './modules/navigation.js';
 
 document.addEventListener('click', (e) => {
   handlePageChange(e);
 });
 
-// Date
-const timeElement = document.querySelector('.time');
-const dateElement = document.querySelector('.date');
-
-/**
- * @param {Date} date
- */
-function formatTime(date) {
-  const hours12 = date.getHours() % 12 || 12;
-  const minutes = date.getMinutes();
-  const seconds = date.getSeconds();
-  const isAm = date.getHours() < 12;
-
-  return `${hours12.toString().padStart(2, '0')}:${minutes
-    .toString()
-    .padStart(2, '0')}:${seconds
-    .toString()
-    .padStart(2, '0')} ${isAm ? 'AM' : 'PM'}`;
-}
-
-/**
- * @param {Date} date
- */
-function formatDate(date) {
-  const DAYS = [
-    'Sunday',
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday',
-  ];
-  const MONTHS = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
-  ];
-
-  return `${DAYS[date.getDay()]}, ${
-    MONTHS[date.getMonth()]
-  } ${date.getDate()} ${date.getFullYear()}`;
-}
-
-setInterval(() => {
-  const now = new Date();
-
-  timeElement.textContent = formatTime(now);
-  dateElement.textContent = formatDate(now);
-}, 200);
+UpdateDate();
 
 let books = JSON.parse(localStorage.getItem('books'));
 
@@ -94,7 +16,7 @@ class Book {
     this.id = id;
   }
 
-  addBook() {
+  addBook = () => {
     const { title, author, id } = this;
     const bookList = { title, author, id };
     const errorMsg = document.querySelector('.warning');
@@ -113,7 +35,7 @@ class Book {
     }
   }
 
-  remove() {
+  remove = () => {
     const { id } = this;
     books = books.filter((book) => {
       if (book.id === id) {
@@ -127,7 +49,7 @@ class Book {
 }
 
 // Display books
-function showBooks(title, author, id) {
+const showBooks = (title, author, id) => {
   const bookList = document.querySelector('.book-list');
   const items = document.createElement('li');
   items.innerHTML = `
@@ -146,7 +68,7 @@ function showBooks(title, author, id) {
     book.remove();
     items.remove();
   });
-}
+};
 
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('form');
