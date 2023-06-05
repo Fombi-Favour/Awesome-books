@@ -5,10 +5,6 @@ document.addEventListener('click', (e) => {
   handlePageChange(e);
 });
 
-// setInterval(() => {
-//   UpdateTime();
-// }, 1000);
-
 UpdateDate();
 
 let books = JSON.parse(localStorage.getItem('books'));
